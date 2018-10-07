@@ -1,0 +1,61 @@
+$form-tween: 200ms;
+$form-tween-animation: ease-out;
+
+.form-seperator {
+    border: 1px solid $text-color; margin: 20px; padding: 20px; 
+    p:last-child, &.no-margin { margin: 0; }
+}
+
+.radio {
+    input[type="radio"] { position: absolute; visibility: hidden; } 
+    input[type="radio"] + label { position: relative; padding-right: 24px; }
+    input[type="radio"] + label::after { content:""; width: 14px; height: 14px; border: 1px solid $text-color; border-radius: 50%; position: absolute; top: 50%; margin-top: -8px; right: 0; transition: background-color $form-tween $form-tween-animation, transform $form-tween $form-tween-animation; }
+
+    input[type="radio"]:hover + label::after {
+        transform: scale(1.2);
+    }
+
+    input[type="radio"]:checked + label::after { background: $text-color; transform: scale(1.2); }    
+}
+
+.checkbox {
+    input[type="checkbox"] { position: absolute; visibility: hidden; } 
+    input[type="checkbox"] + label { position: relative; padding-right: 24px; }
+    input[type="checkbox"] + label::after { content:""; width: 14px; height: 14px; border: 1px solid $text-color; position: absolute; top: 50%; margin-top: -8px; right: 0; transition: background-color $form-tween $form-tween-animation;  }
+    input[type="checkbox"]:checked + label::after {  background: $text-color; }    
+}
+
+.select { 
+    select::-ms-expand{ display:none; }
+    select { -moz-appearance: none; -webkit-appearance: none; border: 1px solid $text-color; width: 200px; padding: 5px; margin: 0 5px; background: url(../img/dd-arrow.png) no-repeat center right; color: $text-color; }    
+}
+
+
+.text {
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="url"]:focus,
+    input[type="number"]:focus,
+    input[type="tel"]:focus,
+    input[type="password"]:focus {
+        box-shadow: 1px 1px 5px $text-color; 
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="password"] {
+        border: 1px solid $text-color; width: 200px; padding: 5px; margin: 0 5px;
+        background: $background-color;
+        color:  $text-color;
+    }
+}
+
+.textarea {
+    textarea:focus { box-shadow: 1px 1px 5px $text-color;  }
+    textarea {
+        border: 1px solid $text-color; width: 200px; height: 200px; padding: 5px; margin: 0 5px; resize: none; background: $background-color; color: $color;
+    }
+}
