@@ -30,6 +30,8 @@ function exzzz() {
     clog("\n================================ \n\n\n");
 }
 
+var default_title = document.title;
+
 $(document).ready(function () {   
 
     for (var f in window) {
@@ -47,8 +49,10 @@ $(document).ready(function () {
     $("#es6MainNav .es6-button").each(function(){
         let functionName = $(this).attr("data-function");
         var f2 = functionName.replace("ex_","").replace(/_/g, " ");
-        let tempVar = `clog_clear(); ${functionName}(); clog_dom(${functionName}.toString()); $('.es6-button').removeClass('active'); $('#${functionName}').addClass('active'); $('#mainHeader').text('${f2}');`;                
+        f2 = f2.charAt(0).toUpperCase() + f2.slice(1);
+        let tempVar = `clog_clear(); ${functionName}(); clog_dom(${functionName}.toString()); $('.es6-button').removeClass('active'); $('#${functionName}').addClass('active'); $('#mainHeader').html('<a href="?run_function=${functionName}">${f2}</a>');document.title = '${f2} - ${default_title}';`;                
         $(this).attr("onclick",tempVar);
+
     }); 
 
     let param = get_url_parameter("run_function");

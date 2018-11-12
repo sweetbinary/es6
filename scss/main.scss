@@ -2,25 +2,7 @@ $background-color: #000;
 $color: #00AA00;
 $border-color: $color;
 $text-color: $color;
-/*
 
-
-
-@import "_flexbox.scss";
-@import "_tweenmax.scss";
-
-@import "_plax.scss";
-
-@import "_shape.scss";
-@import "_svg.scss";
-
-@import "_svg_raf.scss";
-
-@import "_m3d.scss";
-
-@import "_animation.scss";
-
-@import "_ruler.scss";*/
 @import "_grid.scss";
 @import "_responsive.scss";
 
@@ -102,7 +84,11 @@ li, p {
 
 h2 { 
     margin: 0 0 .8em 0;
-    text-decoration: underline;
+    text-decoration: none;
+    a {
+        text-decoration: underline;
+    }
+    
 }
 
 #potato {
@@ -217,4 +203,61 @@ a {
     color: #fff;
     border: 1px solid #fff;
     padding: 10px;
+    &.garbage {
+        opacity: .1;
+        margin: 0;
+        border: 0;
+        display: none;
+    }
 }
+
+#preContainer {
+    position: relative;
+}
+
+pre {
+    white-space: pre-wrap;
+    &.hide {
+        display: none;
+    }
+    
+    &.single-line-comment {
+        color: #0a0;
+    }
+
+    &.zero-margin {
+        margin: 0;
+    }    
+    
+    &.no-margin-top {
+        margin: 0;
+    }
+}
+
+pre + pre {
+    margin-top: 0;
+}
+
+.subcomment, .bullet-comment {
+    color: #fff;
+    margin: 0;
+    &:before {
+        content: '//'
+    }
+    &.no-margin, &.no-margin + pre {
+        margin: 0;
+    }
+}
+
+.bullet-comment {
+    position: relative;
+    padding: 0 0 0 20px;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '• '
+    }
+}
+
+
