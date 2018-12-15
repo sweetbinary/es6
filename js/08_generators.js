@@ -6,7 +6,7 @@ tied to generators*/
     const colors = ['red', 'green', 'blue'];
 
     for (let color of colors) {
-        clog(color);
+        console.log(color);
     }
 
     const numbers = [1,2,3,4];
@@ -15,9 +15,9 @@ tied to generators*/
         total += number;   
     }
 
-    clog(total);
+    console.log(total);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 //what is a generator?
@@ -47,21 +47,21 @@ function ex_generators_simple_explanation(){
     let gen = generator(10);
     
     //a)
-    clog(gen.next().value + ' (expected output: 10), is it done?'); //.done should be false
+    console.log(gen.next().value + ' (expected output: 10), is it done?'); //.done should be false
     
     //b)
-    clog(gen.next().value + ' (expected output: 20)'); //.done should be false
+    console.log(gen.next().value + ' (expected output: 20)'); //.done should be false
     
     //c
-    clog(gen.next().value + ' (expected output: potato)'); //.done should be true
+    console.log(gen.next().value + ' (expected output: potato)'); //.done should be true
     
     //d)
-    clog(gen.next().value + ' (expected output: undefined)');    
+    console.log(gen.next().value + ' (expected output: undefined)');    
 
     //every time you call next, it executes next yield keyword
 
 
-    clog("\n================================ \n\n\n");        
+    console.log("\n================================ \n\n\n");        
 }
 
 
@@ -100,16 +100,16 @@ when we call a function it runs and maybe retuns a value generators run code, re
     }
 
     const gen = shopping(); //does not invoke any code here    
-    clog( gen.next() ); //leaving our house    
+    console.log( gen.next() ); //leaving our house    
     // walking up and down the aisles
     // purchase our stuff
-    clog( gen.next('groceries') );//leaving the store with grocieries ('groceries replaces cash')
-    clog( gen.next('clean clothees') );
+    console.log( gen.next('groceries') );//leaving the store with grocieries ('groceries replaces cash')
+    console.log( gen.next('clean clothees') );
 
 
     //every time you call next, it executes next yield keyword
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 
@@ -128,7 +128,7 @@ function ex_why_use_generators() {
         myColors.push(color);
     }
 
-    clog(myColors);
+    console.log(myColors);
 
 
     /*========================================================================================================================*/
@@ -155,11 +155,11 @@ function ex_why_use_generators() {
         names.push(name);
     }
 
-    clog(names);
+    console.log(names);
 
 
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_combining_multiple_generators() {
@@ -206,9 +206,9 @@ function ex_combining_multiple_generators() {
         names.push(name);
     }
 
-    clog(names);
+    console.log(names);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_generators_and_symbol_iterator(){
@@ -250,9 +250,9 @@ symbol* means theres this other object, find it and figure out how to iterate ov
         names.push(name);
     }
 
-    clog(names);
+    console.log(names);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 
 }
 
@@ -285,7 +285,7 @@ sidenote - array helpers do not work with generators*/
     ];
 
     const tree = new Comment('Great post!', children);
-    //clog_table(tree);
+    //console.table(tree);
 
     values = [];
 
@@ -293,7 +293,7 @@ sidenote - array helpers do not work with generators*/
         values.push(value);
     }
 
-    clog_table(values);
+    console.table(values);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }

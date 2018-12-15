@@ -10,7 +10,7 @@ this is good if you dont know how many arguments you are passing*/
         },0);
     }
 
-    clog( addNumbers(1,2,3,4,5,6,7) ); //note that this is not an array
+    console.log( addNumbers(1,2,3,4,5,6,7) ); //note that this is not an array
 
 /*spead operator
 flatten (spreads) variables
@@ -21,13 +21,13 @@ alternative to concat method
     const userFavoriteColors = ['orange','yellow'];
     const fallColors = ['plong','hlong'];
 
-    clog("concat: " + defaultColors.concat(userFavoriteColors).concat(fallColors));
+    console.log("concat: " + defaultColors.concat(userFavoriteColors).concat(fallColors));
 
     //create new array by referencing existing arrays
-    clog("spead operator: " + [...defaultColors, ...userFavoriteColors, ...fallColors]);
+    console.log("spead operator: " + [...defaultColors, ...userFavoriteColors, ...fallColors]);
 
     //you can also add values which are not in an array
-    clog(['black', ...defaultColors, ...userFavoriteColors, ...fallColors]);
+    console.log(['black', ...defaultColors, ...userFavoriteColors, ...fallColors]);
 
 
     // you can also combine rest and spread
@@ -41,12 +41,12 @@ alternative to concat method
         return items;
     }
 
-    clog(validateShoppingList('oranges','bread','eggs'));
+    console.log(validateShoppingList('oranges','bread','eggs'));
 
     /*if you have an obsolete method but dont want to remove it due to conflict issues you can use ...rest and not have duplicate logic*/
     const mathLibrary = {
         oldMethodName(...rest){
-            clog("this method is deprecated dawg, use multiply instead")
+            console.log("this method is deprecated dawg, use multiply instead")
             return this.multiply(...rest);
         },
         multiply(a,b) {
@@ -54,7 +54,7 @@ alternative to concat method
         }
     }
 
-    clog(mathLibrary.oldMethodName(2,3));
+    console.log(mathLibrary.oldMethodName(2,3));
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }

@@ -30,12 +30,12 @@ you can add functions in the callbacks to deal with the status
 
     //then() and catch() register callbacks
     promise.then(() => {
-        clog('promise is fulfilled :) ');
+        console.log('promise is fulfilled :) ');
     }).catch(() => {
-        clog('promise is not fulfilled :( ');
+        console.log('promise is not fulfilled :( ');
     })
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_fetch_helper(){
@@ -51,23 +51,23 @@ which kinda sucks so its still best to use other stuff like jquery*/
     const url = 'https://jsonplaceholder.typicode.com/posts/';
 
     fetch(url)
-        .then(() => clog('fetch promise is fulfilled :) '))
-        .catch(() => clog('fetch promise is not fulfilled :( '));
+        .then(() => console.log('fetch promise is fulfilled :) '))
+        .catch(() => console.log('fetch promise is not fulfilled :( '));
   
     fetch(url)
         .then(response => response.json())
         .then(ze_data => {            
-            clog('fetch promise is fulfilled and data was retrieved :) ');
-            clog_table(ze_data);
+            console.log('fetch promise is fulfilled and data was retrieved :) ');
+            console.table(ze_data);
         })
         .catch(ze_error => {            
-            clog('fetch promise is not fulfilled and data was not retrieved :( ');
-            clog(ze_error);            
+            console.log('fetch promise is not fulfilled and data was not retrieved :( ');
+            console.log(ze_error);            
         });
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function exz_fetch_helper_issues() {
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }

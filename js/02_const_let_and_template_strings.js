@@ -20,11 +20,11 @@ function ex_const_let() {
     //name = 'Super Bob'; //wont work
     title = 'Supreme Box Packer';
 
-    clog(name + ", a proud peon with the proffesion of " + title);
+    console.log(name + ", a proud peon with the proffesion of " + title);
 
 
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 
@@ -42,18 +42,18 @@ function ex_tempate_strings() {
     }
 
 
-    clog(getMessage());
+    console.log(getMessage());
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 
 /*
 
 ex_const_let();
-clog_dom(ex_const_let.toString());
+console.log_dom(ex_const_let.toString());
 
 ex_tempate_strings();
-clog_dom(ex_tempate_strings.toString());
+console.log_dom(ex_tempate_strings.toString());
 
 */

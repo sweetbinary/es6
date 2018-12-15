@@ -9,14 +9,14 @@ function ex_simple_async_await() {
     }
       
     async function asyncCall() {
-        clog('calling');
+        console.log('calling');
         var result = await resolveAfter2Seconds();
-        clog("result is " + result);    
+        console.log("result is " + result);    
     }
     
     asyncCall();
 
     
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 

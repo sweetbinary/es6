@@ -3,19 +3,19 @@ function ex_arrow_functions() {
     const add = (a, b) => {
         return a + b;
     }
-    clog( add(1,2) );
+    console.log( add(1,2) );
 
     /*shorthand way of the function above, no return needed*/
 
     const subtract = (a, b) => a - b;
-    clog( subtract(20,12) );
+    console.log( subtract(20,12) );
 
 
 
     /*even shorter shorterhand, you can only omit the parenthesis on the argument bit if there is only a single argument*/
 
     const double = number => 2 * number;
-    clog(double(10));
+    console.log(double(10));
 
 
 
@@ -23,7 +23,7 @@ function ex_arrow_functions() {
     const return_potato = () => {
         return 'potato';
     }
-    clog(return_potato());
+    console.log(return_potato());
 
 
     
@@ -41,10 +41,10 @@ function ex_arrow_functions() {
     //becomes this
     doubledNumbers = numbers.map(number => 2 * number);
     
-    clog( doubledNumbers );
+    console.log( doubledNumbers );
 
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_arrow_functions() {
@@ -52,19 +52,19 @@ function ex_arrow_functions() {
     const add = (a, b) => {
         return a + b;
     }
-    clog( add(1,2) );
+    console.log( add(1,2) );
 
     /*shorthand way of the function above, no return needed*/
 
     const subtract = (a, b) => a - b;
-    clog( subtract(20,12) );
+    console.log( subtract(20,12) );
 
 
     /*even shorter shorterhand, you can only omit the parenthesis on the argument bit
     if there is only a single argument*/
 
     const double = number => 2 * number;
-    clog(double(10));
+    console.log(double(10));
 
 
 
@@ -72,7 +72,7 @@ function ex_arrow_functions() {
     const return_potato = () => {
         return 'potato';
     }
-    clog(return_potato());
+    console.log(return_potato());
 
 
     
@@ -90,10 +90,10 @@ function ex_arrow_functions() {
     //becomes this
     doubledNumbers = numbers.map(number => 2 * number);
     
-    clog( doubledNumbers );
+    console.log( doubledNumbers );
 
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_when_to_use_arrow_functions() {
@@ -123,17 +123,17 @@ function ex_when_to_use_arrow_functions() {
     
 
     //not working lol, check capitel 11-29 @ 4:01
-    clog(team.teamSummary());
+    console.log(team.teamSummary());
     
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
     /*
 ex_arrow_functions();
-clog_dom(ex_arrow_functions.toString());
+console.log_dom(ex_arrow_functions.toString());
 
 
 ex_when_to_use_arrow_functions();
-clog_dom(ex_when_to_use_arrow_functions.toString());
+console.log_dom(ex_when_to_use_arrow_functions.toString());
 
 */

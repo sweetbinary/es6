@@ -25,7 +25,7 @@ less code than for loop, swiss army knife of helpers - all other helpers can be 
     let colors = ['red','blue','green'];
 
     colors.forEach(function(color){
-        clog(color);
+        console.log(color);
     });
 
 
@@ -39,9 +39,9 @@ less code than for loop, swiss army knife of helpers - all other helpers can be 
         sum += number;
     }
 
-    clog(sum);
+    console.log(sum);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 //===============================================================================/
@@ -61,7 +61,7 @@ most widely used array helper, great for avoiding mutating arrays";
         return number * 2;
     });
 
-    clog(doubledNumbers);
+    console.log(doubledNumbers);
 
 
     
@@ -74,7 +74,7 @@ most widely used array helper, great for avoiding mutating arrays";
         return car.price;
     });
 
-    clog(prices);
+    console.log(prices);
 
 
 
@@ -85,12 +85,12 @@ most widely used array helper, great for avoiding mutating arrays";
         let colors = array.map(function(color){ //this is called plucking because you pluck a a value
             return color[property];
         });
-        clog(colors);
+        console.log(colors);
     }
 
     pluck(paints,'color');
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 //===============================================================================/
@@ -111,7 +111,7 @@ function ex_filter_array_helper() {
         return product.type === 'fruit';
     });
 
-    clog_table(filteredProducts);
+    console.table(filteredProducts);
 
     //type is vegetable, quantity is greater than 0, price is less than 10
     let filteredProducts2 = products.filter(function(product){
@@ -120,7 +120,7 @@ function ex_filter_array_helper() {
             && product.price < 10;
     });
 
-    clog_table(filteredProducts2);
+    console.table(filteredProducts2);
 
     let post_var = { id: 4, title: 'New Post'};
     let comments_var = [
@@ -136,9 +136,9 @@ function ex_filter_array_helper() {
     }
 
     //get all comments which have the postId of post_var id
-    clog_table(commentsForPost(post_var,comments_var));
+    console.table(commentsForPost(post_var,comments_var));
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 //===============================================================================/
@@ -161,7 +161,7 @@ forEach but with break function once it finds what it wants";*/
         return user.name === 'Alex';
     });
 
-    clog(user);
+    console.log(user);
 
     function car_function(model) {
         this.model = model;
@@ -178,7 +178,7 @@ forEach but with break function once it finds what it wants";*/
     });
 
     //get car whose model is focus
-    clog(car);
+    console.log(car);
 
     
     let posts_var = [
@@ -196,13 +196,13 @@ forEach but with break function once it finds what it wants";*/
 
 
     //get
-    clog( postForComment(posts_var,comment_var) );
+    console.log( postForComment(posts_var,comment_var) );
 
 
 
 
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 
@@ -230,8 +230,8 @@ equivalent of && and || respectively for every value in array, condesning array 
         return computer.ram >= 16;
     });
 
-    clog("every = " + allComputersCanRunProgram);
-    clog("some = " + onlySomeComputersCanRunProgram);
+    console.log("every = " + allComputersCanRunProgram);
+    console.log("some = " + onlySomeComputersCanRunProgram);
 
 
     var names = [
@@ -248,8 +248,8 @@ equivalent of && and || respectively for every value in array, condesning array 
         return name.length > 4;
     });
 
-    clog("every = " + EveryNameCharGreaterTnan4);
-    clog("some = " + SomeNameCharGreaterTnan4);
+    console.log("every = " + EveryNameCharGreaterTnan4);
+    console.log("some = " + SomeNameCharGreaterTnan4);
 
 
     function Field(value) {
@@ -271,9 +271,9 @@ equivalent of && and || respectively for every value in array, condesning array 
         return field.validate();
     });
 
-    clog("is every field valid? " + validate_fields);
+    console.log("is every field valid? " + validate_fields);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 //===============================================================================/
@@ -298,7 +298,7 @@ sums up an array
         return sum + number;
     }, -10);
 
-    clog(reduce_var);
+    console.log(reduce_var);
     
 
     var primaryColors = [
@@ -316,7 +316,7 @@ sums up an array
 
     }, []);
 
-    clog(wut);
+    console.log(wut);
 
     //check if parenthesis are balanced
 
@@ -349,8 +349,8 @@ sums up an array
         }, 0);
     }
 
-    clog("balancedParens " + balancedParens("()(())"));
+    console.log("balancedParens " + balancedParens("()(())"));
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 

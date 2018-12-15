@@ -37,11 +37,11 @@ writing object literals in a more compact function*/
 
     const bookShop = createBookShop(inventory);
 
-    clog(`Price for total inventory is ${bookShop.inventoryValue()}`);
-    clog( `Lord of Pengus costs ${bookShop.priceForTitle('Lord of Pengus')}` );
+    console.log(`Price for total inventory is ${bookShop.inventoryValue()}`);
+    console.log( `Lord of Pengus costs ${bookShop.priceForTitle('Lord of Pengus')}` );
 
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 
@@ -63,11 +63,11 @@ function ex_default_function_arguments(){
         return method;
     }
 
-    clog(makeAjaxRequest('pengus.com','POST'));
-    clog(makeAjaxRequest('pengus.com'));
+    console.log(makeAjaxRequest('pengus.com','POST'));
+    console.log(makeAjaxRequest('pengus.com'));
 
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
     
 

@@ -21,10 +21,10 @@ function ex_destructuring() {
 
     const { type, amount } = expense;    
 
-    //clog(`expenseES5  ${expenseES5.type} , ${expenseES5.amount} `);
-    clog(`expense  ${expense.type} , ${expense.amount} `);
+    //console.log(`expenseES5  ${expenseES5.type} , ${expenseES5.amount} `);
+    console.log(`expense  ${expense.type} , ${expense.amount} `);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_destructuring_arguments_object() {
@@ -45,9 +45,9 @@ function ex_destructuring_arguments_object() {
     }
 
 
-    clog( fileSummary(savedFile, {extraVar: 'potato'}) );
+    console.log( fileSummary(savedFile, {extraVar: 'potato'}) );
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 
@@ -59,20 +59,20 @@ function ex_destructuring_arrays() {
 
     //destructuring properties requires curly brackets
     const { length } = companies;
-    clog(`companies length is is ${length}`);
+    console.log(`companies length is is ${length}`);
 
     //destructuring elements requires square brackets
     const [ name, name2 ] = companies;
-    clog(`name1 is${name} | name2 is ${name2}`);
+    console.log(`name1 is${name} | name2 is ${name2}`);
 
     const [ nameB, nameB2, nameB3, nameB4 ] = companies;
-    clog( `nameb4 typeof is ${typeof nameB4} (should be undefined)` );
+    console.log( `nameb4 typeof is ${typeof nameB4} (should be undefined)` );
 
     //we can use the spread operator as well
     const [nameC, ...rest] = companies;
-    clog(rest);
+    console.log(rest);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_destructuring_arrays_and_objects_at_the_same_time() {
@@ -86,8 +86,8 @@ function ex_destructuring_arrays_and_objects_at_the_same_time() {
 
     //gets the first element's location and second element's name
     const [ { location }, { name } ] = companies;
-    clog(location);
-    clog(name);
+    console.log(location);
+    console.log(name);
 
 
     const Google = {
@@ -99,9 +99,9 @@ function ex_destructuring_arrays_and_objects_at_the_same_time() {
     //then pull out first element of array
     //useless?
     const { locations: [ locationz ] } = Google;
-    clog(locationz);
+    console.log(locationz);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_when_to_use_destructuring() {    
@@ -122,7 +122,7 @@ function ex_when_to_use_destructuring() {
         return (`${username} ${password} ${email} ${dob} ${city}`)
     }
 
-    clog(signup(user));
+    console.log(signup(user));
 
     /*converting an array of arrays to an array of objects*/
     
@@ -138,7 +138,7 @@ function ex_when_to_use_destructuring() {
         return { x, y };
     });
 
-    clog_table(points_object);
+    console.table(points_object);
 
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }

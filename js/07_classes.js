@@ -11,8 +11,8 @@ function es5_classes() {
         return 'vroom';
     }
     const carEs5 = new Car({title: 'Focus'})
-    clog(carEs5);
-    clog(carEs5.drive());
+    console.log(carEs5);
+    console.log(carEs5.drive());
 
     //how do we make toyota inherit car?
     function Toyota(options) {        
@@ -25,13 +25,13 @@ function es5_classes() {
         return 'beep';
     }
     const toyota = new Toyota({ color: 'red', title: 'Daily Driver'});
-    clog(toyota);
-    clog(toyota.drive());
-    clog(toyota.honk());
+    console.log(toyota);
+    console.log(toyota.drive());
+    console.log(toyota.honk());
 
     
     
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function ex_classes() {
@@ -74,22 +74,22 @@ function ex_classes() {
     }
 
     const car = new Car({title: 'Toyota'});
-    clog_table(car);
-    clog(`const car ${car.drive()}`);
+    console.table(car);
+    console.log(`const car ${car.drive()}`);
 
-    clog("------");
+    console.log("------");
 
     const toyota = new Toyota({ title: 'Toyota Plonk', color: 'red' });
-    clog_table(toyota);
-    clog(`const toyota ${toyota.honk()}`);    
+    console.table(toyota);
+    console.log(`const toyota ${toyota.honk()}`);    
 
         
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
 
 function zzx_when_to_use_classes() {
     //this requires react
 
         
-    clog("\n================================ \n\n\n");
+    console.log("\n================================ \n\n\n");
 }
